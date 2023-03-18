@@ -30,7 +30,7 @@ const CalendlyAvailability = () => {
           </div>
           <div className="relative">
             <img src={Chat} alt="" />
-          <div className="absolute top-[5rem] right-1 sm:right-[3.5rem] sm:flex sm:flex-row-reverse">
+          <div className="absolute top-[5rem] right-0 sm:right-[3.5rem] sm:flex sm:flex-row-reverse">
           <div className="w-[304px] h-[295px] text-dimBlue box rounded-md bg-white text-xs ml-20">
               <p className="bg-dimBlue text-white p-2 rounded-md">
                 Lets Chat Soon

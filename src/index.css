@@ -13,3 +13,7 @@ body{
 .borderCol{
     border: 1px solid #2E68FB;
 }
+
+::-webkit-scrollbar{
+    width: 0;
+}

@@ -6,7 +6,7 @@ import GuyConnect from "../assets/GuyConnect.png";
 const Schedule = () => {
   return (
     <Fragment>
-      <div className="flex flex-col lg:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-28">
+      <div className="flex flex-col lg:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-20 sm:mt-28">
         <div className="lg:w-[35%] text-center lg:text-start">
           <h1 className="text-5xl lg:text-7xl text-dimBlue">
             Easy Scheduling <span className="text-lightBlue">ahead</span>
@@ -49,7 +49,7 @@ const Schedule = () => {
               </button>
             </div>
           </div>
-          <img src={GirlImage} alt="" className="h-[550px] w-[750px]" />
+          <img src={GirlImage} alt="" className="h-[400px] md:h-[550px] md:w-[750px]" />
         </div>
       </div>
     </Fragment>

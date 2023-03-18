@@ -80,7 +80,7 @@ const DesignedTeam = () => {
             </div>
           </div>
         </div>
-        <div className="relative -right-16 sm:right-[-8rem]">
+        <div className="relative -right-12 sm:right-[-8rem]">
           <img src={DesignedImage} alt="" className="h-[500px] w-[650px]" />
           <div className="box rounded-[100%] bg-white p-6 absolute top-[4rem] left-[-4rem] text-xs sm:left-[-1rem] text-center">
             <img src={Speed} alt="" className="block mx-auto my-2" />

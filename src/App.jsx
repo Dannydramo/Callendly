@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment } from "react";
 import CalendlyAvailability from "./components/CalendlyAvailability";
 import DesignedTeam from "./components/DesignedTeam";
 import Navbar from "./components/Navbar";

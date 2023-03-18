@@ -39,7 +39,7 @@ const Navbar = () => {
         className="fixed top-0 w-full z-[40]"
         style={{ backgroundColor: navbarBackground, boxShadow: navShadow }}
       >
-        <div className="flex justify-between items-center w-[95%] md:w-[90%] mx-auto h-20">
+        <div className="flex justify-between items-center w-[95%] md:w-[90%] mx-auto h-12 md:h-20">
           <div className="flex items-center">
             <img src={CallendlyLogo} alt="Logo" />
             <p className="text-lightBlue">Callendly</p>
