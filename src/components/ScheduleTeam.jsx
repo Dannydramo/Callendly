@@ -22,11 +22,8 @@ const ScheduleTeam = () => {
               <img src={Arrow3} alt="" className="ml-2 mt-1 w-[20px]" />
             </button>
           </div>
-          <div
-            className="my-8
-        "
-          >
-            <img src={Circle} alt="" />
+          <div className="my-8">
+            <img src={Circle} alt="" className="w-[70%] h-[70%] block mx-auto sm:w-[100%] sm:h-[100%]"/>
           </div>
         </div>
       </div>
