@@ -1,15 +1,15 @@
 import React from "react";
-import Sales from "../assets/Sales.svg";
-import Education from "../assets/Education.svg";
-import Marketing from "../assets/Marketing.svg";
-import Customer from "../assets/Customer.svg";
-import Recruiting from "../assets/Recruiting.svg";
-import Information from "../assets/Information.svg";
-import Dollar from "../assets/Dollar.svg";
-import Deals from "../assets/Deals.svg";
-import Speed from "../assets/Speed.svg";
-import DesignedImage from "../assets/DesignGuy.png";
-import Rounded from "../assets/Rounded.png";
+import Sales from "../../assets/Sales.svg";
+import Education from "../../assets/Education.svg";
+import Marketing from "../../assets/Marketing.svg";
+import Customer from "../../assets/Customer.svg";
+import Recruiting from "../../assets/Recruiting.svg";
+import Information from "../../assets/Information.svg";
+import Dollar from "../../assets/Dollar.svg";
+import Deals from "../../assets/Deals.svg";
+import Speed from "../../assets/Speed.svg";
+import DesignedImage from "../../assets/DesignGuy.png";
+import Rounded from "../../assets/Rounded.png";
 
 const DesignedTeam = () => {
   return (
@@ -80,25 +80,25 @@ const DesignedTeam = () => {
             </div>
           </div>
         </div>
-        <div className="relative -right-16 sm:right-[-8rem]">
+        <div className="relative -right-16 sm:right-[-8rem] lg:right-[-14.5rem]">
           <img src={DesignedImage} alt="" className="h-[400px] md:h-[550px] md:w-[750px]" />
-          <div className="box rounded-[100%] bg-white p-3 sm:p-6 absolute top-[4rem] left-[-4rem] text-xs sm:left-[-1rem] text-center">
+          <div className="box rounded-[100%] bg-white p-3 sm:p-6 absolute top-[4rem] left-[-4rem] text-xs md:text-base sm:left-[-1rem] text-center">
             <img src={Speed} alt="" className="block mx-auto my-2" />
             <p className="my-2">Round Robbin</p>
           </div>
-          <div className="absolute top-[9rem] sm:top-[10.5rem] left-[-4rem] sm:left-0">
+          <div className="absolute top-[9rem] sm:top-[11rem] left-[-4rem] sm:left-0">
             {" "}
             <img src={Rounded} alt="" />
           </div>
-          <div className="box bg-white p-3 sm:p-4 absolute bottom-[1rem] left-[-4rem] text-xs sm:left-[-6rem] rounded-md sm:w-[200px]">
+          <div className="box bg-white p-3 sm:p-4 absolute bottom-[1.5rem] left-[-4rem] text-xs md:text-base sm:left-[-6rem] rounded-md sm:w-[200px]">
             <ul>
                 <li className="mb-2">9 AM - 10 AM</li>
             </ul>
-            <p>Discovery Call</p>
+            <p className="my-2 lg:my-4 font-bold">Discovery Call</p>
             <p>Consultation</p>
           </div>
-          <div className="box bg-white p-3 sm:p-6 absolute top-[14rem] sm:top-[8rem] rounded-md right-16 text-xs sm:right-[9rem] w-[150px] sm:w-[195px]">
-            <p>89%</p>
+          <div className="box bg-white p-3 sm:p-6 absolute top-[14rem] sm:top-[10rem] rounded-md right-16 text-xs md:text-base sm:right-[12rem] w-[150px] sm:w-[195px]">
+            <p className="text-3xl lg:text-5xl text-lightBlue">89%</p>
             <p>Of awesome and satisfied customers and still counting</p>
           </div>
         </div>

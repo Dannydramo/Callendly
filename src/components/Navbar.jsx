@@ -3,6 +3,7 @@ import CallendlyLogo from "../assets/Callendly.png";
 import Dropdown from "../assets/Vector.png";
 import Openmenu from "../assets/icon-menu.svg";
 import Closemenu from "../assets/icon-close.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let [open, setOpen] = useState(false);
@@ -38,10 +39,12 @@ const Navbar = () => {
         style={{ backgroundColor: navbarBackground, boxShadow: navShadow }}
       >
         <div className="flex justify-between items-center w-[95%] md:w-[90%] mx-auto h-16 md:h-20">
+        <Link to='/'>
           <div className="flex items-center">
-            <img src={CallendlyLogo} alt="Logo" />
+          <img src={CallendlyLogo} alt="Logo" />
             <p className="text-lightBlue">Callendly</p>
           </div>
+          </Link>
           <img
             src={open ? Closemenu : Openmenu}
             className="lg:hidden z-[42]"
@@ -76,10 +79,11 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-8 absolute top-[18rem] left-4 lg:relative lg:top-0">
-              <button className="text-start">Login</button>
-              <button className="bg-lightBlue text-white px-4 py-2 rounded-md">
+          
+            <Link to='/login'  className="text-start">Login</Link>
+              <Link to='/signup' className="bg-lightBlue text-white px-4 py-2 rounded-md">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>

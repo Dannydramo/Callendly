@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Chat from "../assets/Chat.svg";
-import LinkedIn from "../assets/LinkedIn.svg"
-import Twitter from "../assets/Twitter.svg"
-import Yahoo from "../assets/Yahoo.svg"
-import Instagram from "../assets/Instagram.svg"
-import Arrow3 from '../assets/Arrow 3.png'
+import Chat from "../../assets/Chat.svg";
+import LinkedIn from "../../assets/LinkedIn.svg"
+import Twitter from "../../assets/Twitter.svg"
+import Yahoo from "../../assets/Yahoo.svg"
+import Instagram from "../../assets/Instagram.svg"
+import Arrow3 from '../../assets/Arrow 3.png'
 
 const CalendlyAvailability = () => {
   return (

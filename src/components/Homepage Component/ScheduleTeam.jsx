@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-import Circle from "../assets/CircleImg.png";
-import Arrow3 from "../assets/Arrow 3.png";
+import Circle from "../../assets/CircleImg.png";
+import Arrow3 from "../../assets/Arrow 3.png";
+
 
 const ScheduleTeam = () => {
   return (

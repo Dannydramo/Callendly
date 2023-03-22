@@ -1,10 +1,11 @@
 import { Fragment } from "react";
-import CalendlyAvailability from "./components/CalendlyAvailability";
-import DesignedTeam from "./components/DesignedTeam";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Schedule from "./components/Schedule";
-import ScheduleTeam from "./components/ScheduleTeam";
-import Simplified from "./components/Simplified";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 
 function App() {
   
@@ -13,12 +14,14 @@ function App() {
   return (
     <Fragment>
       <div className="min-h-screen absolute top-0 bg-[#E5E5E5] w-full overflow-x-hidden">
-        <Navbar />
-        <Schedule />
-        <Simplified />
-        <DesignedTeam />
-        <CalendlyAvailability />
-        <ScheduleTeam />
+        <Navbar /> 
+       <div>
+       <Routes>
+       <Route exact path="/" element={<Home />}/>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login"  element={<Login />} />
+       </Routes>
+       </div>
       </div>
     </Fragment>
   );
