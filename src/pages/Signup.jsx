@@ -1,6 +1,7 @@
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useContext, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import AuthContext from "../context/AuthContext";
 
 const Signup = () => {
   const emailRef = useRef();
@@ -8,6 +9,7 @@ const Signup = () => {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   const navigate = useNavigate()
+  const {signupUser} = useContext(AuthContext)
 
   const [errMessage, setErrMessage] = useState("");
 
@@ -45,7 +47,8 @@ const Signup = () => {
         setErrMessage("");
       }, 3000);
     } else {
-      console.log(userInput, passwordInput, emailInput, confirmPasswordInput);
+      // console.log(userInput, passwordInput, emailInput, confirmPasswordInput);
+      signupUser(emailInput, passwordInput)
       navigate('/')
     }
   };
