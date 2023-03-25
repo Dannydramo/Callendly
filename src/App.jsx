@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import { AuthProvider } from "./context/AuthContext";
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
   
   return (
     <Fragment>
+        
+      <AuthProvider>
       <div className="min-h-screen absolute top-0 bg-[#E5E5E5] w-full overflow-x-hidden">
         <Navbar /> 
        <div>
@@ -22,7 +25,9 @@ function App() {
         <Route path="/login"  element={<Login />} />
        </Routes>
        </div>
+
       </div>
+      </AuthProvider>
     </Fragment>
   );
 }
