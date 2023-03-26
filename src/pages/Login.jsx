@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <Fragment>
-      <div className="max-w-[600px] mx-auto mt-20 sm:mt-24 p-4">
+       <div className="max-w-[600px] mx-auto mt-[6rem] md:mt-24 p-4">
         <h1 className="text-3xl">Login</h1>
         <form onSubmit={handleSubmit}>
           <div className="rounded-xl box p-8 my-4 flex flex-col text-md sm:text-xl">

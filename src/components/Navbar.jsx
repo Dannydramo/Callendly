@@ -32,6 +32,8 @@ const Navbar = () => {
     };
   }, []);
 
+
+
   return (
     <Fragment>
       <div
@@ -58,9 +60,9 @@ const Navbar = () => {
           >
             <div className="">
               <ul className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-12 text-dimBlue absolute top-20 left-4 lg:relative lg:top-0">
-                <li>
-                  <a href="">Product</a>
-                </li>
+                <Link to={'/product'} onClick={()=> setOpen(false)}>
+                Product
+                </Link>
                 <li>
                   <a href="" className="flex items-center">
                     Solutions{" "}
@@ -80,8 +82,8 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-8 absolute top-[18rem] left-4 lg:relative lg:top-0">
           
-            <Link to='/login'  className="text-start">Login</Link>
-              <Link to='/signup' className="bg-lightBlue text-white px-4 py-2 rounded-md">
+            <Link to='/login'  className="text-start" onClick={()=> setOpen(false)}>Login</Link>
+              <Link to='/signup' className="bg-lightBlue text-white px-4 py-2 rounded-md" onClick={()=> setOpen(false)}>
                 Get Started
               </Link>
             </div>

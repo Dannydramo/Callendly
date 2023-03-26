@@ -10,12 +10,12 @@ const CalendlyAvailability = () => {
   return (
     <Fragment>
       <div className="w-[95%] md:w-[90%] mx-auto my-12">
-        <h1 className="text-center text-dimBlue text-4xl md:w-[50%] font-bold mx-auto my-12">
+      <h1 className="lg:w-[85%] mx-auto text-center my-6 text-dimBlue mb-10 text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold">
           We make scheduling for you easier than ever
         </h1>
-        <div className="flex flex-col lg:flex-row justify-between items-center ">
-          <div className="lg:w-[40%] text-center lg:text-start">
-            <h1 className="text-5xl lg:text-5xl text-dimBlue">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+        <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Share your Calelendly availability with others
             </h1>
             <p className="text-lg text-coralBlue my-4">
@@ -28,7 +28,7 @@ const CalendlyAvailability = () => {
             <img src={Arrow3} alt="" className="ml-2 mt-1 w-[20px]"/>
           </button>
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <img src={Chat} alt="" />
           <div className="absolute top-[5rem] right-0 sm:right-[3.5rem] sm:flex sm:flex-row-reverse">
           <div className="w-[304px] h-[295px] text-dimBlue box rounded-md bg-white text-xs ml-20">
@@ -73,8 +73,8 @@ const CalendlyAvailability = () => {
             </div>
 
           </div>
-          </div>
-          </div>
+          </div> 
+          </div>*/}
         </div>
       </div>
     </Fragment>

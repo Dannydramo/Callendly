@@ -8,13 +8,14 @@ const Signup = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
-  const navigate = useNavigate()
-  const {signupUser} = useContext(AuthContext)
-
   const [errMessage, setErrMessage] = useState("");
+  const navigate = useNavigate();
+
+  // Firebase Signup User Authentication
+  const { signupUser } = useContext(AuthContext);
 
   // Handle Signup submit function
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const userInput = userRef.current.value;
@@ -24,38 +25,40 @@ const Signup = () => {
 
     //Check if Input has values
 
-    if (
-      userInput.trim() === "" ||
-      emailInput.trim() === "" ||
-      passwordInput.trim() === "" ||
-      confirmPasswordInput.trim() === ""
-    ) {
-      setErrMessage("Please Enter All Required Field");
-      setTimeout(() => {
-        setErrMessage("");
-      }, 3000);
-    } else if (passwordInput.length < 8) {
-      // check if password input has upto 8 characters
-      setErrMessage("Please password must contain upto 8 char");
-      setTimeout(() => {
-        setErrMessage("");
-      }, 3000);
-    } else if (passwordInput !== confirmPasswordInput) {
-      // Check if password and confirm password  value matches
-      setErrMessage("Please password must be the same");
-      setTimeout(() => {
-        setErrMessage("");
-      }, 3000);
-    } else {
-      // console.log(userInput, passwordInput, emailInput, confirmPasswordInput);
-      signupUser(emailInput, passwordInput)
-      navigate('/')
-    }
+    try {
+      if (
+        userInput.trim() === "" ||
+        emailInput.trim() === "" ||
+        passwordInput.trim() === "" ||
+        confirmPasswordInput.trim() === ""
+      ) {
+        setErrMessage("Please Enter All Required Field");
+        setTimeout(() => {
+          setErrMessage("");
+        }, 3000);
+      } else if (passwordInput.length < 8) {
+        // check if password input has upto 8 characters
+        setErrMessage("Please password must contain upto 8 char");
+        setTimeout(() => {
+          setErrMessage("");
+        }, 3000);
+      } else if (passwordInput !== confirmPasswordInput) {
+        // Check if password and confirm password  value matches
+        setErrMessage("Please password must be the same");
+        setTimeout(() => {
+          setErrMessage("");
+        }, 3000);
+      } else {
+        // console.log(userInput, passwordInput, emailInput, confirmPasswordInput);
+        navigate("/product");
+        await signupUser(emailInput, passwordInput);
+      }
+    } catch (error) {}
   };
 
   return (
     <Fragment>
-      <div className="max-w-[600px] mx-auto mt-20 sm:mt-24 p-4">
+      <div className="max-w-[600px] mx-auto mt-[6rem] md:mt-24 p-4">
         <h1 className="text-3xl">SignUp</h1>
         <form onSubmit={handleSubmit}>
           <div className="rounded-xl box p-8 my-4 flex flex-col text-md sm:text-xl">

@@ -8,14 +8,14 @@ import Information from "../../assets/Information.svg";
 import Dollar from "../../assets/Dollar.svg";
 import Deals from "../../assets/Deals.svg";
 import Speed from "../../assets/Speed.svg";
-import DesignedImage from "../../assets/DesignGuy.png";
-import Rounded from "../../assets/Rounded.png";
+
+
 
 const DesignedTeam = () => {
   return (
     <div className="w-[95%] md:w-[90%] lg:w-[85%] mx-auto sm:mt-24">
       <div className="">
-        <h1 className="text-center text-dimBlue text-4xl md:w-[50%] font-bold mx-auto my-12">
+        <h1 className="lg:w-[85%] mx-auto text-center my-6 text-dimBlue mb-10 text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold">
           Designed for teams who conduct meetings at scale
         </h1>
         <div className="flex justify-between items-center my-12 w-full overflow-x-auto scroll_bar">
@@ -46,8 +46,8 @@ const DesignedTeam = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center my-16">
-        <div className="lg:w-[30%] lg:text-start">
+      <div className="flex flex-col md:flex-row justify-between items-center my-16">
+        <div className="md:w-[48%] lg:w-[35%]">
           <div className="flex items-start">
             <img src={Dollar} alt="" className="mt-1 ml-2" />
             <div className="text-dimBlue ml-4">
@@ -80,28 +80,9 @@ const DesignedTeam = () => {
             </div>
           </div>
         </div>
-        <div className="relative -right-16 sm:right-[-8rem] lg:right-[-14.5rem]">
-          <img src={DesignedImage} alt="" className="h-[400px] md:h-[550px] md:w-[750px]" />
-          <div className="box rounded-[100%] bg-white p-3 sm:p-6 absolute top-[4rem] left-[-4rem] text-xs md:text-base sm:left-[-1rem] text-center">
-            <img src={Speed} alt="" className="block mx-auto my-2" />
-            <p className="my-2">Round Robbin</p>
+        <div className="my-8">
+            {/* <img src={DesignedImage} alt="" className="block mx-auto sm:w-[100%] sm:h-[100%]"/> */}
           </div>
-          <div className="absolute top-[9rem] sm:top-[11rem] left-[-4rem] sm:left-0">
-            {" "}
-            <img src={Rounded} alt="" />
-          </div>
-          <div className="box bg-white p-3 sm:p-4 absolute bottom-[1.5rem] left-[-4rem] text-xs md:text-base sm:left-[-6rem] rounded-md sm:w-[200px]">
-            <ul>
-                <li className="mb-2">9 AM - 10 AM</li>
-            </ul>
-            <p className="my-2 lg:my-4 font-bold">Discovery Call</p>
-            <p>Consultation</p>
-          </div>
-          <div className="box bg-white p-3 sm:p-6 absolute top-[14rem] sm:top-[10rem] rounded-md right-16 text-xs md:text-base sm:right-[12rem] w-[150px] sm:w-[195px]">
-            <p className="text-3xl lg:text-5xl text-lightBlue">89%</p>
-            <p>Of awesome and satisfied customers and still counting</p>
-          </div>
-        </div>
       </div>
     </div>
   );

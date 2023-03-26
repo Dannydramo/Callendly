@@ -6,10 +6,10 @@ import Arrow3 from "../../assets/Arrow 3.png";
 const ScheduleTeam = () => {
   return (
     <Fragment>
-      <div className="w-[95%] md:w-[90%] mx-auto mt-[12rem] sm:mt-24">
-        <div className="flex flex-col lg:flex-row justify-between items-center ">
-          <div className="lg:w-[40%] text-center lg:text-start">
-            <h1 className="text-5xl lg:text-5xl text-dimBlue">
+      <section className="w-[95%] md:w-[90%] mx-auto mt-[12rem] sm:mt-24">
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+        <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Schedule as a team
             </h1>
             <p className="text-lg text-coralBlue my-4">
@@ -24,10 +24,10 @@ const ScheduleTeam = () => {
             </button>
           </div>
           <div className="my-8">
-            <img src={Circle} alt="" className="w-[70%] h-[70%] block mx-auto sm:w-[100%] sm:h-[100%]"/>
+            <img src={Circle} alt="" className="block mx-auto sm:w-[100%] sm:h-[100%]"/>
           </div>
         </div>
-      </div>
+      </section>
     </Fragment>
   );
 };

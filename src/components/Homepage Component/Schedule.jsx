@@ -1,7 +1,4 @@
 import React, { Fragment } from "react";
-import GirlImage from "../../assets/Girl.png";
-import GirlConnect from "../../assets/GirlConnect.png";
-import GuyConnect from "../../assets/GuyConnect.png";
 import Ebay from "../../assets/Ebay.svg";
 import Zenefits from "../../assets/Zenefits.svg";
 import Compass from "../../assets/COMPASS.svg";
@@ -17,9 +14,9 @@ const Schedule = () => {
       {/* ==== Schedule Section ======== */}
       
       <section>
-        <div className="flex flex-col lg:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-20 sm:mt-28">
-          <div className="lg:w-[35%] text-center lg:text-start">
-            <h1 className="text-5xl lg:text-7xl text-dimBlue">
+        <div className="flex flex-col md:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-20 sm:mt-28">
+          <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+            <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Easy Scheduling <span className="text-lightBlue">ahead</span>
             </h1>
             <p className="text-lg text-coralBlue my-4">
@@ -31,7 +28,7 @@ const Schedule = () => {
               Get Started
             </button>
           </div>
-          <div className="relative lg:right-[-6.5rem]">
+          {/* <div className="relative lg:right-[-6.5rem]">
             <div className="flex absolute top-8 items-center">
               <img src={GirlConnect} alt="" className="h-[50px] mr-2" />
               <div className="box bg-white rounded-md p-2 text-xs">
@@ -63,9 +60,9 @@ const Schedule = () => {
             <img
               src={GirlImage}
               alt=""
-              className="h-[400px] md:h-[550px] md:w-[750px]"
+              className="h-[400px] md:h-[550px] w-full md:w-[750px]"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -75,20 +72,20 @@ const Schedule = () => {
       {/* ======== Simplified Section ========= */}
       <section>
         <div className="w-[95%] lg:w-[85%] mx-auto mt-12 md:mt-24">
-          <h2 className="text-center text-3xl text-dimBlue font-bold mb-10">
+          <h2 className="text-center my-6 text-dimBlue mb-10 text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold">
             Simplified scheduling for more than{" "}
             <span className="text-lightBlue">10,000,000</span> users worldwide
           </h2>
-          <div className="flex justify-between items-center w-full overflow-x-auto scroll_bar">
-            <img src={Ebay} alt="" className="w-[40%] md:max-w-[10%] mr-6" />
+          <div className="flex justify-between items-center w-full overflow-x-auto scroll_bar my-8">
+            <img src={Ebay} alt="" className="md:w-[100px]" width='39' height='10' />
             <img
               src={Zenefits}
               alt=""
-              className="w-[40%] md:max-w-[10%]  mr-6"
+              className="md:w-[100px]" width='39' height='10' 
             />
-            <img src={Compass} alt="" className="w-[40%] md:max-w-[10%] mr-6" />
-            <img src={Twillo} alt="" className="w-[40%] md:max-w-[10%] mr-6" />
-            <img src={Dropbox} alt="" className="w-[40%] md:max-w-[10%]" />
+            <img src={Compass} alt="" className="md:w-[100px]" width={'39'} height='10'/>
+            <img src={Twillo} alt="" className="md:w-[100px]" width='39' height='10' />
+            <img src={Dropbox} alt="" className="md:w-[100px]" width='39' height='10' />
           </div>
         </div>
       </section>
