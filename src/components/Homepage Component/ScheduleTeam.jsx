@@ -6,7 +6,7 @@ import Arrow3 from "../../assets/Arrow 3.png";
 const ScheduleTeam = () => {
   return (
     <Fragment>
-      <section className="w-[95%] md:w-[90%] mx-auto mt-[12rem] sm:mt-24">
+      <section className="w-[95%] md:w-[90%] mx-auto sm:mt-24">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
         <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">

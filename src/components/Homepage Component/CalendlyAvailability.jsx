@@ -10,7 +10,7 @@ const CalendlyAvailability = () => {
   return (
     <Fragment>
       <div className="w-[95%] md:w-[90%] mx-auto my-12">
-      <h1 className="lg:w-[85%] mx-auto text-center my-6 text-dimBlue mb-10 text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold">
+      <h1 className="lg:w-[85%] mx-auto text-center my-6 text-dimBlue mb-10 text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold mt-[-5rem] md:mt-0">
           We make scheduling for you easier than ever
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-center">
