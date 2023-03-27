@@ -25,7 +25,7 @@ const CalendlyAvailability = () => {
           </button>
           </div>
           <div className="">
-              <img src={AvailableImg} alt="" />
+              <img src={AvailableImg} alt="" className=""/>
           </div>
         </div>
       </div>
