@@ -51,7 +51,7 @@ const Signup = () => {
       } else {
         // console.log(userInput, passwordInput, emailInput, confirmPasswordInput);
         navigate("/product");
-        await signupUser(emailInput, passwordInput);
+        await signupUser(emailInput, passwordInput, userInput);
       }
     } catch (error) {}
   };

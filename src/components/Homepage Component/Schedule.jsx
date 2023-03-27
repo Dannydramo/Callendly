@@ -5,6 +5,7 @@ import Compass from "../../assets/COMPASS.svg";
 import Twillo from "../../assets/Twillo.svg";
 import Dropbox from "../../assets/Dropbox.svg";
 
+
 const Schedule = () => {
 
   
@@ -28,41 +29,9 @@ const Schedule = () => {
               Get Started
             </button>
           </div>
-          {/* <div className="relative lg:right-[-6.5rem]">
-            <div className="flex absolute top-8 items-center">
-              <img src={GirlConnect} alt="" className="h-[50px] mr-2" />
-              <div className="box bg-white rounded-md p-2 text-xs">
-                <p>Let's find a time to connect</p>
-                <p className="text-lightBlue">candly.com-xdr-wsa/003</p>
-              </div>
-            </div>
-            <div className="flex absolute bottom-2 left-[-2%] items-center">
-              <img src={GuyConnect} alt="" className="h-[50px] mr-2" />
-              <div className="box bg-white rounded-md p-2 text-xs">
-                <p>Let's find a time to connect</p>
-                <p className="text-lightBlue">candly.com-xdr-wsa/003</p>
-              </div>
-            </div>
-            <div className="absolute bottom-20 right-0 sm:right-[12%] box bg-white rounded-md p-2 text-xs">
-              <p className="text-dimBlue font-bold text-center">
-                Wednesday Aug 18
-              </p>
-              <p className="text-center my-2 text-lightBlue borderCol rounded py-2">
-                10 : 00 AM
-              </p>
-              <div className="flex space-x-3 my-2 text-white">
-                <button className="bg-dimBlue px-2 py-1 rounded">Snooze</button>
-                <button className="bg-lightBlue px-2 py-1 rounded">
-                  Confirm
-                </button>
-              </div>
-            </div>
-            <img
-              src={GirlImage}
-              alt=""
-              className="h-[400px] md:h-[550px] w-full md:w-[750px]"
-            />
-          </div> */}
+          <div className="my-8">
+            {/* <img src={Circle} alt="" className="block mx-auto sm:w-[100%] sm:h-[100%]"/> */}
+          </div>
         </div>
       </section>
 

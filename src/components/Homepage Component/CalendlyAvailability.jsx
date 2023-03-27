@@ -1,9 +1,5 @@
 import React, { Fragment } from "react";
-import Chat from "../../assets/Chat.svg";
-import LinkedIn from "../../assets/LinkedIn.svg"
-import Twitter from "../../assets/Twitter.svg"
-import Yahoo from "../../assets/Yahoo.svg"
-import Instagram from "../../assets/Instagram.svg"
+import AvailableImg from '../../assets/AvailableImg.png'
 import Arrow3 from '../../assets/Arrow 3.png'
 
 const CalendlyAvailability = () => {
@@ -28,53 +24,9 @@ const CalendlyAvailability = () => {
             <img src={Arrow3} alt="" className="ml-2 mt-1 w-[20px]"/>
           </button>
           </div>
-          {/* <div className="relative">
-            <img src={Chat} alt="" />
-          <div className="absolute top-[5rem] right-0 sm:right-[3.5rem] sm:flex sm:flex-row-reverse">
-          <div className="w-[304px] h-[295px] text-dimBlue box rounded-md bg-white text-xs ml-20">
-              <p className="bg-dimBlue text-white p-2 rounded-md">
-                Lets Chat Soon
-              </p>
-              <p className="p-2">michael.o.jordan@gmail.com</p>
-              <hr />
-              <p className="p-2">Your Interview</p>
-              <hr />
-              <p className="p-2 w-[180px]">
-                Hi Michael,We are excited to learn about your skills and
-                qualifications please schedule your interview
-              </p>
-              <div className="flex justify-between w-[220px] p-2">
-                <p>Tuesday Jul 20</p>
-                <p>Thursday Jul 25</p>
-              </div>
-              <div className="grid gap-2 p-2 grid-cols-4 mb-2">
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">9 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">2 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">3 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">6 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">7 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">1 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">4 : 00 AM</p>
-                    <p className="p-1 text-lightBlue border-lightBlue border rounded">5 : 00 AM</p>
-              </div>
-            </div>
-          <div className="flex justify-between mt-8 sm:mt-0 ml-[5rem] lg:ml-0 sm:flex-col">
-            <div className="box p-4 rounded-lg bg-white">
-                <img src={LinkedIn} alt="" />
-            </div>
-            <div className="box p-4 rounded-lg bg-white md:mt-6 ml-2 md:ml-0">
-                <img src={Twitter} alt="" />
-            </div>
-            <div className="box p-4 rounded-lg bg-white md:mt-6 ml-2 md:ml-0">
-                <img src={Yahoo} alt="" />
-            </div>
-            <div className="box p-4 rounded-lg bg-white md:mt-6 ml-2 md:ml-0">
-                <img src={Instagram} alt="" />
-            </div>
-
+          <div className="">
+              <img src={AvailableImg} alt="" />
           </div>
-          </div> 
-          </div>*/}
         </div>
       </div>
     </Fragment>

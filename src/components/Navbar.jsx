@@ -1,14 +1,29 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useContext } from "react";
 import CallendlyLogo from "../assets/Callendly.png";
 import Dropdown from "../assets/Vector.png";
 import Openmenu from "../assets/icon-menu.svg";
 import Closemenu from "../assets/icon-close.svg";
 import { Link } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 const Navbar = () => {
   let [open, setOpen] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState("transparent");
   const [navShadow, setNavShadow] = useState("");
+  const [change, setChange] = useState(false)
+  const {signoutUser} = useContext(AuthContext)
+  
+  const userId = JSON.parse(localStorage.getItem('user'))
+  
+  useEffect(() => {
+    
+    
+        if (userId) {
+          setChange(true)
+        }
+  }, [userId])
+
+
   
 
   const handleScroll = () => {
@@ -31,6 +46,20 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+  const signOutHandler = async ()=>{
+
+    
+    try {
+      await signoutUser()
+      setOpen(false)
+  setChange(false)
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 
 
 
@@ -82,7 +111,11 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-8 absolute top-[18rem] left-4 lg:relative lg:top-0">
           
-            <Link to='/login'  className="text-start" onClick={()=> setOpen(false)}>Login</Link>
+           {!change && <Link to='/login'  className="text-start" onClick={()=>{
+            setOpen(false)
+           }}>Login</Link>}
+
+            {change && <Link to='/'  className="text-start" onClick={signOutHandler}>Logut</Link>}
               <Link to='/signup' className="bg-lightBlue text-white px-4 py-2 rounded-md" onClick={()=> setOpen(false)}>
                 Get Started
               </Link>

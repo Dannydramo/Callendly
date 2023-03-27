@@ -1,16 +1,25 @@
-import React, { Fragment, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment, useContext, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-
+import AuthContext from "../context/AuthContext";
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const {loginUser} = useContext(AuthContext)
+  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const emailInput = emailRef.current.value;
     const passwordInput = passwordRef.current.value;
-    console.log(emailInput, passwordInput);
+ 
+
+    try {
+      await loginUser(emailInput, passwordInput)
+      navigate("/product");
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (

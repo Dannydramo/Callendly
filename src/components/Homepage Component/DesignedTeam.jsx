@@ -8,6 +8,7 @@ import Information from "../../assets/Information.svg";
 import Dollar from "../../assets/Dollar.svg";
 import Deals from "../../assets/Deals.svg";
 import Speed from "../../assets/Speed.svg";
+import DesignedImage from '../../assets/DesignGuy.png'
 
 
 
@@ -81,7 +82,7 @@ const DesignedTeam = () => {
           </div>
         </div>
         <div className="my-8">
-            {/* <img src={DesignedImage} alt="" className="block mx-auto sm:w-[100%] sm:h-[100%]"/> */}
+            <img src={DesignedImage} alt="" className="relative left-8 md:left-32 xl:left-[10rem]"/>
           </div>
       </div>
     </div>
