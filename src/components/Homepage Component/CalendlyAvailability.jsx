@@ -10,7 +10,7 @@ const CalendlyAvailability = () => {
           We make scheduling for you easier than ever
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+        <div className="md:w-[48%] lg:w-[35%] text-start">
         <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Share your Calelendly availability with others
             </h1>
@@ -25,7 +25,7 @@ const CalendlyAvailability = () => {
           </button>
           </div>
           <div className="">
-              <img src={AvailableImg} alt="" className=""/>
+              <img src={AvailableImg} alt="" width='479' height='406'  className="w-[100%]"/>
           </div>
         </div>
       </div>

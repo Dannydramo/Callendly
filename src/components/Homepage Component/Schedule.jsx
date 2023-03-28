@@ -16,7 +16,7 @@ const Schedule = () => {
       
       <section>
         <div className="flex flex-col md:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-20 sm:mt-28">
-          <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+          <div className="md:w-[48%] lg:w-[35%] text-start">
             <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Easy Scheduling <span className="text-lightBlue">ahead</span>
             </h1>

@@ -8,7 +8,7 @@ const ScheduleTeam = () => {
     <Fragment>
       <section className="w-[95%] md:w-[90%] mx-auto sm:mt-24">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="md:w-[48%] lg:w-[35%] text-center md:text-start">
+        <div className="md:w-[48%] lg:w-[35%] text-start">
         <h1 className="text-[2rem] leading-[1.4] md:text-[3rem] lg:leading-[1.2] xl:text-[4rem] font-bold text-dimBlue">
               Schedule as a team
             </h1>
@@ -24,7 +24,7 @@ const ScheduleTeam = () => {
             </button>
           </div>
           <div className="my-8">
-            <img src={Circle} alt="" className="block mx-auto sm:w-[100%] sm:h-[100%]"/>
+            <img src={Circle} alt="" width='569' height='296' className="block mx-auto w-[100%] h-[100%]"/>
           </div>
         </div>
       </section>
