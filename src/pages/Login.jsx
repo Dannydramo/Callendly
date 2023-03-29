@@ -5,7 +5,7 @@ import AuthContext from "../context/AuthContext";
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const [errMessage, setErrMessage] = useState("");
 
