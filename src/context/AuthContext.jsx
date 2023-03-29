@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const googleSignIn = async () => {
     try {
-      const result = await auth.signInWithPopup(googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
       console.log(result.user);
     } catch (error) {
       console.log(error);

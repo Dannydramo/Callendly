@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBu8VfpAgcDJe-pPO_bCkVCsdfc1hMo14k",
-  authDomain: "callendly-d77e7.firebaseapp.com",
-  projectId: "callendly-d77e7",
-  storageBucket: "callendly-d77e7.appspot.com",
-  messagingSenderId: "699813390032",
-  appId: "1:699813390032:web:2737ce697dd585596d60d5",
+  apiKey: "AIzaSyDvV_sI9poT2bInZEC5xcEdGNueAuj9JYA",
+  authDomain: "callendly-authentication.firebaseapp.com",
+  projectId: "callendly-authentication",
+  storageBucket: "callendly-authentication.appspot.com",
+  messagingSenderId: "155182495395",
+  appId: "1:155182495395:web:f77e97ee99c4b4cebdb116",
 };
 
 const app = initializeApp(firebaseConfig);
