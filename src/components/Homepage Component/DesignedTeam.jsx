@@ -10,8 +10,6 @@ import Deals from "../../assets/Deals.svg";
 import Speed from "../../assets/Speed.svg";
 // import DesignedImage from '../../assets/DesignGuy.png'
 
-
-
 const DesignedTeam = () => {
   return (
     <div className="w-[95%] md:w-[90%] lg:w-[85%] mx-auto sm:mt-24">
@@ -82,8 +80,8 @@ const DesignedTeam = () => {
           </div>
         </div>
         <div className="my-8">
-            {/* <img src={DesignedImage} alt="" className="relative left-8 md:left-322 xl:left-[10rem]"/> */}
-          </div>
+          {/* <img src={DesignedImage} alt="" className="relative left-8 md:left-322 xl:left-[10rem]"/> */}
+        </div>
       </div>
     </div>
   );

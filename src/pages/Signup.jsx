@@ -12,7 +12,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   // Firebase Signup User Authentication
-  const { signupUser } = useContext(AuthContext);
+  const { signupUser, googleSignIn } = useContext(AuthContext);
 
   // Handle Signup submit function
   const handleSubmit = async (e) => {
@@ -53,7 +53,14 @@ const Signup = () => {
         navigate("/product");
         await signupUser(emailInput, passwordInput, userInput);
       }
-    } catch (error) {}
+    } catch (error) {
+      setErrMessage(error.message);
+    }
+  };
+
+  const googleSign = async () => {
+    googleSignIn();
+    navigate("/product");
   };
 
   return (
@@ -108,8 +115,11 @@ const Signup = () => {
             </button>
 
             <div className="grid">
-              <button className="flex items-center w-full text-center justify-center my-4 space-x-4 bg-gray-700 py-2 rounded-md text-white">
-                <FcGoogle /> <span>SignUp with Google </span>{" "}
+              <button
+                onClick={googleSign}
+                className="flex items-center w-full text-center justify-center my-2 space-x-4 bg-gray-700 py-2 rounded-md text-white"
+              >
+                <FcGoogle /> <span>Continue with Google </span>{" "}
               </button>
             </div>
 

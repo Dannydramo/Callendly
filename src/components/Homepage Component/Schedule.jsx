@@ -5,15 +5,11 @@ import Compass from "../../assets/COMPASS.svg";
 import Twillo from "../../assets/Twillo.svg";
 import Dropbox from "../../assets/Dropbox.svg";
 
-
 const Schedule = () => {
-
-  
   return (
     <Fragment>
-
       {/* ==== Schedule Section ======== */}
-      
+
       <section>
         <div className="flex flex-col md:flex-row justify-between items-center w-[95%] md:w-[90%] mx-auto mt-20 sm:mt-28">
           <div className="md:w-[48%] lg:w-[35%] text-start">
@@ -37,7 +33,6 @@ const Schedule = () => {
 
       {/* ======= End Of Schedule Section ========= */}
 
-
       {/* ======== Simplified Section ========= */}
       <section>
         <div className="w-[95%] lg:w-[85%] mx-auto mt-12 md:mt-24">
@@ -46,15 +41,41 @@ const Schedule = () => {
             <span className="text-lightBlue">10,000,000</span> users worldwide
           </h2>
           <div className="flex justify-between items-center w-full overflow-x-auto scroll_bar my-8">
-            <img src={Ebay} alt="" className="md:w-[100px]" width='39' height='10' />
+            <img
+              src={Ebay}
+              alt=""
+              className="md:w-[100px]"
+              width="39"
+              height="10"
+            />
             <img
               src={Zenefits}
               alt=""
-              className="md:w-[100px]" width='39' height='10' 
+              className="md:w-[100px]"
+              width="39"
+              height="10"
             />
-            <img src={Compass} alt="" className="md:w-[100px]" width={'39'} height='10'/>
-            <img src={Twillo} alt="" className="md:w-[100px]" width='39' height='10' />
-            <img src={Dropbox} alt="" className="md:w-[100px]" width='39' height='10' />
+            <img
+              src={Compass}
+              alt=""
+              className="md:w-[100px]"
+              width={"39"}
+              height="10"
+            />
+            <img
+              src={Twillo}
+              alt=""
+              className="md:w-[100px]"
+              width="39"
+              height="10"
+            />
+            <img
+              src={Dropbox}
+              alt=""
+              className="md:w-[100px]"
+              width="39"
+              height="10"
+            />
           </div>
         </div>
       </section>

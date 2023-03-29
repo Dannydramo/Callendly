@@ -4,47 +4,65 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState({})
-    const [userName, setUserName] = useState()
+  const [user, setUser] = useState({});
+  //   const [displayUser, setDisplayUser] = useState(true);
+  //   let setUserName;
+
   const signupUser = (email, password, userName) => {
-      setUserName(userName)
-      localStorage.setItem('user', JSON.stringify(userName))
+    // setUserName = userName;
+    // localStorage.setItem("user", JSON.stringify(setUserName));
+    // setDisplayUser(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const loginUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-  const loginUser = (email, password)=>{
-    return signInWithEmailAndPassword(auth, email, password)
-  }
+  const signoutUser = () => {
+    // setDisplayUser(false);
+    return signOut(auth);
+  };
 
-
-  const signoutUser = ()=>{
-    localStorage.removeItem('user')
-    return signOut(auth)
-
-  }
-
+  const googleProvider = new GoogleAuthProvider();
+  const googleSignIn = async () => {
+    try {
+      const result = await auth.signInWithPopup(googleProvider);
+      console.log(result.user);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-  const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
-    console.log(currentUser);
-    setUser(currentUser)
-  })
-  
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
+      setUser(currentUser);
+    });
+
     return () => {
-      unsubscribe()
-    }
-  }, [])
-  
+      unsubscribe();
+    };
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ signupUser, user, loginUser, signoutUser }}>
+    <AuthContext.Provider
+      value={{
+        signupUser,
+        user,
+        loginUser,
+        signoutUser,
+        googleSignIn,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

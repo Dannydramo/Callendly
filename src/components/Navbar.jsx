@@ -10,25 +10,11 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState("transparent");
   const [navShadow, setNavShadow] = useState("");
-  const [change, setChange] = useState(false)
-  const {signoutUser} = useContext(AuthContext)
-  
-  const userId = JSON.parse(localStorage.getItem('user'))
-  
-  useEffect(() => {
-    
-    
-        if (userId) {
-          setChange(true)
-        }
-  }, [userId])
-
-
-  
+  const { signoutUser, user } = useContext(AuthContext);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition > 100) {
+    if (scrollPosition > 50) {
       setNavbarBackground("#F4F6FC");
       setNavShadow(
         "-3px -3px 0px rgba(24, 52, 86, 0.06), 0px 3px 3px rgba(24, 52, 86, 0.11)"
@@ -47,21 +33,15 @@ const Navbar = () => {
     };
   }, []);
 
-
-  const signOutHandler = async ()=>{
-
-    
+  const signOutHandler = async () => {
     try {
-      await signoutUser()
-      setOpen(false)
-  setChange(false)
+      await signoutUser();
+      setOpen(false);
+      setChange(false);
     } catch (error) {
       console.log(error);
     }
-
-  }
-
-
+  };
 
   return (
     <Fragment>
@@ -70,11 +50,11 @@ const Navbar = () => {
         style={{ backgroundColor: navbarBackground, boxShadow: navShadow }}
       >
         <div className="flex justify-between items-center w-[95%] md:w-[90%] mx-auto h-16 md:h-20">
-        <Link to='/'>
-          <div className="flex items-center">
-          <img src={CallendlyLogo} alt="Logo" />
-            <p className="text-lightBlue">Callendly</p>
-          </div>
+          <Link to="/">
+            <div className="flex items-center">
+              <img src={CallendlyLogo} alt="Logo" />
+              <p className="text-lightBlue">Callendly</p>
+            </div>
           </Link>
           <img
             src={open ? Closemenu : Openmenu}
@@ -89,8 +69,8 @@ const Navbar = () => {
           >
             <div className="">
               <ul className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-12 text-dimBlue absolute top-20 left-4 lg:relative lg:top-0">
-                <Link to={'/product'} onClick={()=> setOpen(false)}>
-                Product
+                <Link to={"/product"} onClick={() => setOpen(false)}>
+                  Product
                 </Link>
                 <li>
                   <a href="" className="flex items-center">
@@ -110,13 +90,29 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center space-y-8 lg:space-y-0  lg:space-x-8 absolute top-[18rem] left-4 lg:relative lg:top-0">
-          
-           {!change && <Link to='/login'  className="text-start" onClick={()=>{
-            setOpen(false)
-           }}>Login</Link>}
+              {!user && (
+                <Link
+                  to="/login"
+                  className="text-start"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  Login
+                </Link>
+              )}
 
-            {change && <Link to='/'  className="text-start" onClick={signOutHandler}>Logut</Link>}
-              <Link to='/signup' className="bg-lightBlue text-white px-4 py-2 rounded-md" onClick={()=> setOpen(false)}>
+              {user && (
+                <Link to="/" className="text-start" onClick={signOutHandler}>
+                  Logut
+                </Link>
+              )}
+
+              <Link
+                to="/signup"
+                className="bg-lightBlue text-white px-4 py-2 rounded-md"
+                onClick={() => setOpen(false)}
+              >
                 Get Started
               </Link>
             </div>
