@@ -22,11 +22,10 @@ const Login = () => {
     }
   };
 
-  const googleSign = () => {
+  const googleSign = async () => {
     googleSignIn();
     navigate("/product");
   };
-
   return (
     <Fragment>
       <div className="max-w-[600px] mx-auto mt-[6rem] md:mt-24 p-4">
