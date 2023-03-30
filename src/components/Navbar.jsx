@@ -3,7 +3,7 @@ import CallendlyLogo from "../assets/Callendly.png";
 import Dropdown from "../assets/Vector.png";
 import Openmenu from "../assets/icon-menu.svg";
 import Closemenu from "../assets/icon-close.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [navbarBackground, setNavbarBackground] = useState("transparent");
   const [navShadow, setNavShadow] = useState("");
   const { signoutUser, user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -37,6 +38,7 @@ const Navbar = () => {
     try {
       await signoutUser();
       setOpen(false);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

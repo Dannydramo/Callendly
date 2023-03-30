@@ -6,6 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const { user } = useContext(AuthContext);
 
   if (!user) return <Navigate to="/signup" />;
+  if (user) return <Navigate to="/product" />;
 
   return children;
 };
