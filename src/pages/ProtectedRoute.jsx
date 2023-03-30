@@ -5,8 +5,9 @@ import AuthContext from "../context/AuthContext";
 const ProtectedRoute = ({ children }) => {
   const { user } = useContext(AuthContext);
 
-  if (!user) return <Navigate to="/signup" />;
-  if (user) return <Navigate to="/product" />;
+  if (!user) {
+    return <p>You must be authenticated to access this page.</p>;
+  }
 
   return children;
 };
