@@ -52,7 +52,6 @@ const Login = () => {
             </div>
 
             <button
-              onClick={googleSign}
               type="submit"
               className="bg-lightBlue text-white px-4 py-2 rounded-md my-4"
             >
@@ -60,7 +59,10 @@ const Login = () => {
             </button>
 
             <div className="grid">
-              <button className="flex items-center w-full text-center justify-center my-2 space-x-4 bg-gray-700 py-2 rounded-md text-white">
+              <button
+                onClick={googleSign}
+                className="flex items-center w-full text-center justify-center my-2 space-x-4 bg-gray-700 py-2 rounded-md text-white"
+              >
                 <FcGoogle /> <span>Continue with Google </span>{" "}
               </button>
             </div>

@@ -37,7 +37,6 @@ const Navbar = () => {
     try {
       await signoutUser();
       setOpen(false);
-      setChange(false);
     } catch (error) {
       console.log(error);
     }
